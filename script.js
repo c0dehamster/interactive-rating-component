@@ -9,8 +9,10 @@ for (const button of buttons) {
 	button.addEventListener("click", e => {
 		// Clear the previous choice if there was one
 
-		for (const button of buttons) {
-			button.dataset.selected = false
+		const previousSelected = document.querySelector('[data-selected="true"]')
+
+		if (previousSelected) {
+			previousSelected.dataset.selected = false
 		}
 
 		// Store the new user's choice
