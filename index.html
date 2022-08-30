@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<script src="script.js" defer></script>
+
+		<title>Frontend Mentor | Interactive rating component</title>
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="card rating-state" data-display="visible">
+			<div class="icon-wrapper circular background-color-grey center">
+				<img class="icon" src="icon-star.svg" alt="" />
+			</div>
+
+			<h2 class="font-weight-bold font-size-heading color-white">How did we do?</h2>
+			<p>
+				Please let us know how we did with your support request. All feedback is appreciated to help us improve
+				our offering!
+			</p>
+
+			<div class="buttons">
+				<button class="button rate circular center" data-value="1" data-selected="false">1</button>
+				<button class="button rate circular center" data-value="2" data-selected="false">2</button>
+				<button class="button rate circular center" data-value="3" data-selected="false">3</button>
+				<button class="button rate circular center" data-value="4" data-selected="false">4</button>
+				<button class="button rate circular center" data-value="5" data-selected="false">5</button>
+			</div>
+
+			<button class="button submit circular color-white" data-type="inverted">SUBMIT</button>
+		</div>
+
+		<div class="card thank-you-state" data-display="hidden">
+			<div class="image-wrapper center">
+				<img src="illustration-thank-you.svg" alt="" />
+			</div>
+
+			<p class="user-choice border-radius-max background-color-grey"></p>
+
+			<h2 class="font-weight-bold font-size-heading color-white">Thank you!</h2>
+
+			<p>
+				We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get
+				in touch!
+			</p>
+		</div>
+
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+			<a href="https://github.com/twDevNoob" target="_blank">twDevNoob</a>.
+		</div>
+	</body>
+</html>
