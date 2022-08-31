@@ -5,6 +5,7 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+	display: inherit;
 }
 
 /* Remove default margin */
@@ -110,38 +111,28 @@ select {
 }
 
 body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
 	background-color: var(--color-neutral-900);
 	color: var(--color-neutral-200);
 	font-family: "Overpass", sans-serif;
 	font-size: var(--font-size-300);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-@media (min-width: 25rem) {
-	body {
-		font-size: var(--font-size-400);
-	}
 }
 
 .card {
-	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	background-color: var(--color-neutral-800);
+
+	/* Technically, some the following should belong to the block level */
+
 	margin: var(--spacer-25);
 	flex: 0 1 25.75rem;
 	max-width: 25.75rem;
 	border-radius: min(30px, var(--border-radius));
 	padding-inline: min(var(--spacer-32), var(--spacer-24));
 	padding-block: min(var(--spacer-32), var(--spacer-24));
-}
-
-.buttons {
-	display: flex;
-	justify-content: space-between;
 }
 
 /* Utilities */
@@ -173,8 +164,8 @@ body {
 
 /* Color utilitiy classes */
 
-.background-color-grey {
-	background-color: var(--color-neutral-700);
+.color-orange {
+	color: var(--color-primary-400);
 }
 
 .color-grey {
@@ -189,11 +180,28 @@ body {
 	color: var(--color-neutral-100);
 }
 
-.rate {
-	width: 3rem;
+.background-color-orange {
+	background-color: var(--color-primary-400);
+}
+
+.background-color-grey {
+	background-color: var(--color-neutral-800);
+}
+
+.background-color-light-grey {
+	background-color: var(--color-neutral-700);
 }
 
 /* Display and shape utility classes */
+
+.space-between {
+	justify-content: space-between;
+}
+
+.center {
+	align-items: center;
+	justify-content: center;
+}
 
 .circular {
 	width: min(52px, var(--circular-element));
@@ -205,31 +213,22 @@ body {
 	border-radius: var(--border-radius-max);
 }
 
-.center {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
 /* Block layer */
 
 .button {
 	border: none;
-	color: var(--color-neutral-200);
-	background-color: var(--color-neutral-400);
 }
 
 .thank-you-state {
 	align-items: center;
 	text-align: center;
-	justify-content: space-around;
+	padding-block: 3rem;
 }
 
 .user-choice {
-	color: var(--color-primary-400);
 	width: max-content;
-	padding-inline: 1em;
-	padding-block: 0.5em;
+	padding-inline: 1.2em;
+	padding-block: 0.3em;
 }
 
 .icon {
@@ -237,22 +236,27 @@ body {
 	aspect-ratio: 1;
 }
 
+.text-wrapper {
+	flex-direction: column;
+}
+
 /* Exceptions */
+
+head {
+	display: none;
+}
 
 [data-display="hidden"] {
 	display: none;
 }
 
-.button[data-type="inverted"] {
-	width: 100%;
-	color: var(--color-neutral-100);
-	background-color: var(--color-primary-400);
-	letter-spacing: 3px;
-}
-
 .button:hover {
 	color: var(--color-neutral-100);
 	background-color: var(--color-primary-400);
+}
+
+.button[data-type="inverted"] {
+	width: 100%;
 }
 
 .button[data-type="inverted"]:hover {
