@@ -107,7 +107,6 @@ select {
 	--border-radius: 3.2vw;
 
 	--circular-element: 11.2vw;
-	--circular-element-large: 52px;
 }
 
 body {
@@ -166,10 +165,6 @@ body {
 
 .color-orange {
 	color: var(--color-primary-400);
-}
-
-.color-grey {
-	color: var(--color-neutral-300);
 }
 
 .color-light-grey {
