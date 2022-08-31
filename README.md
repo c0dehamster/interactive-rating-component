@@ -44,19 +44,17 @@ Users should be able to:
 -   Flexbox
 -   Mobile-first workflow
 
-This is an attempt to use Cube CSS metodology although it was probably unnecessary.
+This is an attempt to use Cube CSS metodology. It was probably unnecessary for a project as small as this but I hope it will be useful later.
 
 ### What I learned
 
-I learned the ways to use flexbox as a versatile tool to create responsive layouts. For example, it was used to cehter stand-alone components with a utility class:
+I learned the ways to use flexbox as a versatile tool to create responsive layouts. For example, it was used to center stand-alone components with a utility class:
 
 .center {
 display: flex;
 align-items: center;
 justify-content: center;
 }
-
-Also I looked into the properties of display: grid which I was going to use for the button section but it turned up to be unnecessary.
 
 I struggled trying to make circular components scale with the page. Eventually, I did it using viewport width units:
 
